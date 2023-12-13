@@ -9,15 +9,7 @@
 //!   Diagnostics are compile-time type errors, whereas JsErrors are runtime
 //!   exceptions.
 
-use deno_core::error::AnyError;
-use deno_core::serde_json;
-use deno_core::url;
-use deno_core::ModuleResolutionError;
-use deno_fetch::reqwest;
-use std::env;
-use std::error::Error;
-use std::io;
-use std::sync::Arc;
+
 
 fn get_dlopen_error_class(error: &dlopen2::Error) -> &'static str {
   use dlopen2::Error::*;
